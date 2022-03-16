@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="zh-cn">
+
+<head>
+    <%- include('./_ignore/head') %>
+</head>
+
+<body>
+    <nav class="navbar navbar-light bg-light">
+        <span class="navbar-brand mb-0 h1"><%= config.title %></span>
+    </nav>
+    <br>
+    <% for(let i = 0;i < Object.keys(post).length;i++) { %>
+        <div class="card" style="width: 50%;text-align: center;margin-left: auto;margin-right: auto;">
+            <div class="card-body">
+                <a class="card-title" href="<%= post[i].filename %>.html">
+                    <%= post[i].metaData.title %>
+                </a>
+                <p class="card-text">
+                    <%- String(post[i].content).replace(/<\/?.+?\/?>/g,"").substring(0,50); %>
+                </p>
+            </div>
+        </div>
+        <br>
+        <% } %>
+            <footer class="page-footer font-small blue">
+
+                <div class="footer-copyright text-center py-3">
+                    Copyright © 2020
+                    <a>
+                        <%= config.author %>
+                    </a>
+                    <br> Powered by
+                    <a>QuickSite</a>
+                </div>
+
+            </footer>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+<script src="./js/bootstrap.min.js"></script>
+
+</html>

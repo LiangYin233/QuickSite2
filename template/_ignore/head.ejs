@@ -1,0 +1,64 @@
+<title>
+    <%= config.title %>
+</title>
+<link rel="stylesheet" href="./css/bootstrap.min.css">
+<meta charset="utf-8">
+<link rel="icon" href="<%- config.icon %>">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="<%- config.description %>">
+<% if (config.analytics.tencent != ""){ %>
+    <script>
+        var _mtac = {};
+        (function() {
+            var mta = document.createElement("script");
+            mta.src = "//pingjs.qq.com/h5/stats.js?v2.0.4";
+            mta.setAttribute("name", "MTAH5");
+            mta.setAttribute("sid", "<%- config.analytics.tencent %>");
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(mta, s);
+        })();
+    </script>
+    <% } %>
+
+        <% if(config.analytics.baidu_sitemap == true){ %>
+            <meta name="baidu-site-verification" content="<%= config.baidu_vertification%>" />
+            <script>
+                (function() {
+                    var bp = document.createElement('script');
+                    var curProtocol = window.location.protocol.split(':')[0];
+                    if (curProtocol === 'https') {
+                        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+                    } else {
+                        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+                    }
+                    var s = document.getElementsByTagName("script")[0];
+                    s.parentNode.insertBefore(bp, s);
+                })();
+            </script>
+            <% } %>
+
+                <% if(config.analytics.baidu != ""){ %>
+                    <script>
+                        var _hmt = _hmt || [];
+                        (function() {
+                            var hm = document.createElement("script");
+                            hm.src = "https://hm.baidu.com/hm.js?<%= config.analytics.baidu %>";
+                            var s = document.getElementsByTagName("script")[0];
+                            s.parentNode.insertBefore(hm, s);
+                        })();
+                    </script>
+                    <% } %>
+
+                        <% if(config.analytics.google != ""){ %>
+                            <!-- Global site tag (gtag.js) - Google Analytics -->
+                            <script async src="https://www.googletagmanager.com/gtag/js?id=<%- config.analytics.google %>"></script>
+                            <script>
+                                window.dataLayer = window.dataLayer || [];
+
+                                function gtag() {
+                                    dataLayer.push(arguments);
+                                }
+                                gtag('js', new Date());
+                                gtag('config', '<%- config.analytics.google %>');
+                            </script>
+                            <% } %>

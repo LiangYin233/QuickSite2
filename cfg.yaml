@@ -1,0 +1,24 @@
+
+url: https://imly.top/
+
+description: QuickSite
+    
+sitemap: true
+    
+title: QuickSite
+    
+author: LiangYin
+    
+icon: ./favicon.ico
+    
+valine:
+  enable: false
+  appkey:
+  appid:
+  placeholder:
+    
+analytics:
+  baidu:
+  tencent:
+  google:
+  baidu_sitemap: false

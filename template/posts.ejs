@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="zh-cn">
+
+<head>
+    <%- include('./_ignore/head') %>
+</head>
+
+<body>
+    <nav class="navbar navbar-light bg-light">
+        <a class="navbar-brand mb-0 h1" href="./index.html">
+            <%= config.title %>
+        </a>
+    </nav>
+    <br>
+    <div class="card" style="width: 70%;text-align: center;margin-left: auto;margin-right: auto;">
+        <article class="markdown-body">
+            <div class="card-body">
+                <h1 class="card-title">
+                    <%= post.metaData.title %>
+                </h1>
+                <p class="card-text">
+                    <%- post.content %>
+                </p>
+            </div>
+            <p style="color: gray;">文章创建于
+                <%= post.birthTime %> 最后修改于
+                    <%= post.changeTime %>
+            </p>
+        </article>
+        <% if(config.valine.enable == true){ %>
+            <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+            <div id="vcomments"></div>
+            <script>
+                new Valine({
+                    el: '#vcomments',
+                    appId: '<%- config.valine.appid %>',
+                    appKey: '<%- config.valine.appkey %>',
+                    placeholder: '<%- config.valine.placeholder %>',
+                    recordIP: true,
+                    enableQQ: true
+                })
+            </script>
+            <% } %>
+    </div>
+    <footer class="page-footer font-small blue">
+
+        <div class="footer-copyright text-center py-3">
+            Copyright © 2020
+            <a>
+                <%= config.author %>
+            </a>
+            <br> Powered by
+            <a>QuickSite</a>
+        </div>
+
+    </footer>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+<script src="./js/bootstrap.min.js"></script>
+
+</html>
