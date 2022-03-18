@@ -1,4 +1,4 @@
-let ejs = require("ejs"),
+const ejs = require("ejs"),
     fs = require("fs-extra"),
     path = require("path"),
     parseMd = require("markdown-it"),

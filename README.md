@@ -1,9 +1,13 @@
 # QuickSite V2
 > This is a Chinese readme file. Please wait for translation for readme files in other languages.
 
-QuickSite是一个基于Node.JS的静态网站生成器。
+QuickSite是一个快速，简单，强大的博客框架，由强劲的Node.js支持。
 
-高性能与简单。
+# 特点
+- 高性能
+- 简单易用
+- 轻松地开发插件
+- 轻松地制作主题
 
 # Better than V1
 - 最高 800% 的性能提升 * 于不加载任何插件的情形下测试
@@ -12,8 +16,6 @@ QuickSite是一个基于Node.JS的静态网站生成器。
 - 插件系统
 
 # 使用
-Windows平台作为示例:
-
 `$ npm run new <name>` 来创建一篇新博文
 
 `$ npm run build` 来构建你的网站
@@ -31,9 +33,9 @@ ForkKILLET 为本项目的部分正则表达式做出的贡献。
 PridePlayer 使用并提出相当大的建议。
 
 # 如何贡献
-欢迎你的PR与ISSUES！
+欢迎你的 PR 与 ISSUES！
 
-另外,在提交PR时,请务必描述你所做的改动。
+另外,在提交 PR 时,请务必描述你所做的改动。
 
 # 许可证
 MIT License © [LiangYin](https://github.com/LiangYin233)
