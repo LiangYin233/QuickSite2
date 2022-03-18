@@ -15,9 +15,13 @@ function removeElement(arr, item) {
     });
 }
 
-function load(config, postInfo, dirsObj) {
-    cfg = config;
-    dirs = dirsObj;
+function register() {
+    return ["afterBuild"];
+}
+
+function load(obj, type) {
+    cfg = obj.config;
+    dirs = obj.dirUrls;
     sitemapLstGen(dirs);
     fs.writeFileSync(path.join(dirs.buildDir, "sitemap.xml"), new xml2js.Builder().buildObject(sitemap));
 }
@@ -40,5 +44,6 @@ function sitemapLstGen(dirs) {
 }
 
 module.exports = {
+    register,
     load
 };
