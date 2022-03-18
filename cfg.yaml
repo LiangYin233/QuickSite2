@@ -22,3 +22,6 @@ analytics:
   tencent:
   google:
   baidu_sitemap: false
+
+plugin:
+  url: https://imly.top/

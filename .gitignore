@@ -1,3 +1,5 @@
 node_modules
 build
 package-lock.json
+plugins/plugin-sitemap/node_modules
+plugins/plugin-sitemap/package-lock.json
